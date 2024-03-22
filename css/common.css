@@ -33,6 +33,33 @@
 
 }
 
-@media (max-width:768px) {}
+@media (max-width:768px) {
+    .default .tit_area h2 {
+            position: relative;
+            font-size: 24px;
+            font-weight: 600;
+            margin: 0 0 40px 0;
+        }
+    
+        .default .tit_area p {
+            line-height: 18px;
+            font-size: 16px;
+            margin: 0 0 32px 0;
+        }
+}
 
-@media (max-width:500px) {}
+@media (max-width:500px) {
+    .default .tit_area h2 {
+            position: relative;
+            font-size: 24px;
+            font-weight: 600;
+            margin: 0 0 24px 0;
+        }
+    
+        .default .tit_area p {
+            line-height: 18px;
+            font-size: 16px;
+            margin: 0 0 32px 0;
+        }
+        
+}

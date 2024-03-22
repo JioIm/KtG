@@ -38,10 +38,15 @@ $(function () {
             .addClass('on')
             .siblings()
             .removeClass('on');
-
-        $('.MainArchive .tit_area .tab_wrap span').css({
-            left: (200 * idx) + 'px',
-        })
+ if ($(window).width() <= 500) {
+            $('.MainArchive .tit_area .tab_wrap span').css({
+                left: (120 * idx) + 'px',
+            });
+        } else {
+            $('.MainArchive .tit_area .tab_wrap span').css({
+                left: (200 * idx) + 'px',
+            });
+        }
     });
 
     $('.MainContent .con_area .itm').on('click', function () {
@@ -53,12 +58,20 @@ $(function () {
 
 
 
-    $('.MainArchive .tab_inner ').slick({
+    $('.MainArchive .tab_inner').slick({
         arrows: false,
         dots: false,
         infinite: true,
         slidesToShow: 3,
         slidesToScroll: 1
+    });
+
+         $(window).resize(function(){
+        if($(window).width() <= 500){ // 화면 너비가 500px 이하인 경우
+            $('.MainArchive .tab_inner').slick('slickSetOption', 'slidesToShow', 1, true);
+        } else {
+            $('.MainArchive .tab_inner').slick('slickSetOption', 'slidesToShow', 3, true);
+        }
     });
 
 
